@@ -29,8 +29,7 @@ body {
 }
 
 section {
-  min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  padding: 8rem 9% 2rem;
 }
 
 .header {
@@ -72,12 +71,32 @@ section {
   display: none;
 }
 
+.faq-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.faq-container img {
+  height: 500px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .faq {
   display: flex;
   text-align: center;
+  margin-top: 10px;
 }
 
-
+.faq-container h3 {
+  font-size: 5rem;
+  font-weight: 600;
+}
 
 .faq-content h3 {
   font-size: 3.2rem;
@@ -111,49 +130,12 @@ section {
 
 }
 
-.accordion-button::after {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
-  transform: scale(.7) !important;
-}
-.accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
-}
-
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-img img {
-  padding-left: 100px;
-  width: 50vw;
-  height: 65vh;
-}
-
-.home-content h3 {
-  font-size: 3.2rem;
-  font-weight: 700;
-}
-
-.home-content h3:nth-of-type(2) {
-  margin-bottom: 2rem;
-}
-
-span {
-  color: var(--main-color);
-}
 
 .home-content h1 {
   font-size: 5.6rem;
   font-weight: 700;
   line-height:  1.3;
 }
-
-.home-content p {
-  font-size: 1.6rem;
-}
-
 .social-media a {
   display: inline-flex;
   justify-content: center;
@@ -174,6 +156,149 @@ span {
   color: var(--second-bg-color);
   box-shadow: 0 0 1rem var(--main-color);
 
+}
+
+/*ACCORDION
+.accordion {
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color: var(--second-bg-color);
+  padding: 45px 45px;
+}
+
+.accordion .accordion-container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: #F24C3D;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 15px;
+  transform: translateY(-50%);
+}
+
+.accordion .content {
+  position: relative;
+  background: var(--second-bg-color);
+  height: 0;
+  font-size: 15px;
+  text-align: justify;
+  width: 650px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.accordion hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid #22A699;
+}
+
+.accordion .accordion-container.active .content {
+  height: 100px;
+}
+
+.accordion .accordion-container.active .label::before {
+  content: '-';
+  font-size: 30px;
+}
+*/
+
+/*ACCORDIONG*/
+
+section .section-accordion {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container-accordion {
+  width: 100%;
+  max-width: 80rem;
+  margin: -25px auto;
+  padding: 25px 1.5rem;
+}
+
+.accordion-item {
+  background-color: var(--main-color);
+  border-radius: .4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 1rem 2px 1rem rgba(0, 0, 0, .1);
+}
+
+.accordion-link {
+  font-size: 2rem;
+  color: #FFF;
+  text-decoration: none;
+  background-color: var(--main-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.accordion-link i {
+  color: var(--second-bg-color);
+  padding: .5rem;
+}
+
+.accordion-link .bx-minus {
+  display: none;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--second-bg-color);
+  transition: max-height 650ms;
+}
+
+.answer::before {
+  content: '';
+  position: absolute;
+  width: .6rem;
+  height: 90%;
+  background-color: #22A699;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.answer p {
+  color: var(--text-color);
+  font-size: 1.7rem;
+  padding: 2rem;
+}
+
+.accordion-item:target .answer {
+  max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .bx-plus {
+  display: none;
+}
+
+.accordion-item:target .accordion-link .bx-minus {
+  display: block;
 }
 
 .btn {
@@ -574,7 +699,7 @@ span {
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
   html {
-    font-sizeL 55%;
+    font-size: 55%;
   }
 }
 
@@ -600,23 +725,66 @@ span {
     display: block;
   }
 
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
+header .navigation {
+    display: none;
+}
+
+header .navigation.active {
+    position: fixed;
     width: 100%;
-    padding: 1rem 3%;
-    background: var(--bg-color);
-    border-top: .1rem solid rgba(0, 0, 0, .2);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    background: rgb(1, 1, 1, 0.5);
+}
 
-  }
+header .navigation .navbar a {
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+}
 
+header .navigation .navbar a:before {
+    background: #B26E4B;
+    height: 5px;
+}
 
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-  }
+header .navigation .navbar a:hover {
+    color: #B26E4B;
+}
+
+header .navigation.active .navbar {
+    background: #EBD2BC;
+    width: 600px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 20);
+}
+
+  .menu-btn {
+    background: url(/Photos/menu.jpg)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;        
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-btn.active {
+    z-index: 999;
+    background: url(/Photos/close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+}
 }
 

@@ -17,18 +17,18 @@
   <header class="header">
     <a href="#" class="logo">iKen <span>Travel</span></a>
 
-    <i class='bx bx-menu' id="menu-icon"></i>
+    <div class="menu-btn"></div>
 
-    <nav class="navbar">
-        <a href="homepage.html">Home</a>
+  <div class="navigation">
+    <div class="navbar">
+        <a href="index.html">Home</a>
         <a href="aboutpage.html">About</a>        
         <a href="adventurepage.html">Adventure</a>        
         <a href="faqpage.html">FAQ</a>        
         <a href="contactpage.html">Contact</a>        
-
-    </nav>
+    </div>
+  </div>
   </header>
-
 
    <!-- about section design-->
    <section class="about" id="about">
@@ -39,8 +39,24 @@
       <div class="about-box">
         <i class='bx bx-user'></i>
         <h3>Introduction</h3>
-        <p>I'm Kenneth John, a dedicated and enthusiastic customer service representative with a passion for delivering exceptional customer service. With 7 years of experience in the industry, I've honed my skills and developed a deep understanding of what it takes to provide personalized support and exceed customer expectations.</p>
-        <p>Solo travel has been my ultimate catalyst for personal growth and self-discovery. It allows me to step out of my comfort zone, embrace new challenges, and fully immerse myself in the beauty of each destination. For me, there's nothing more liberating than charting my own course, meeting fellow wanderers, and creating lifelong memories along the way.</p>
+        <p>I'm Kenneth John, a dedicated and enthusiastic customer service representative with a passion for delivering exceptional customer service. With 7 years of experience in the BPO industry, I've honed my skills and developed a deep understanding of what it takes to provide personalized support and exceed customer expectations.</p>
+        <p>Solo travel has been my ultimate catalyst for personal growth and self-discovery. It allows me to step out of my comfort zone, embrace new challenges, and fully immerse myself in the beauty of each destination. For me, there's nothing more liberating than charting my own course, meeting fellow wanderers, and creating lifelong memories along the way. It seeks individuals to step out of comfort zones.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="about-box">
+        <i class='bx bx-clipboard'></i>
+        <h3>Project Description</h3>
+        <p>This platform is designed to inspire and assist fellow solo travelers in embarking on incredible adventures. We envision a world where solo travel is accessible to everyone, regardless of their background or level of experience. </p>
+        <p>The project behind my solo travel website aims to provide valuable resources, travel tips, destination guides, and personal stories to empower and encourage the people to explore the world on your own terms. From hidden gems to practical advice on safety and budgeting, this website is your go-to companion for unforgettable solo travel experiences. Ultimately, we aspire to inspire a global movement of fearless solo travelers who embrace the world with open minds.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="about-box">
+        <i class='bx bx-target-lock'></i>
+        <h3>Objectives</h3>
+        <p>The website aims to inspire individuals to embrace solo travel by showcasing the freedom, excitement, and personal growth that comes with exploring the world alone. It seeks to empower individuals to step out of their comfort zones and embark on their own adventures. Also, this website aims to create a sense of community among solo travelers by providing a platform for them to connect, share experiences, and support one another.</p>
+        <p>In addition, we seek to promote responsible and sustainable travel practices among solo travelers. It emphasizes the importance of respecting local cultures, minimizing environmental impact, and supporting local communities, thereby encouraging travelers to be conscious.</p>
         <a href="#" class="btn">Read More</a>
       </div>
 
@@ -57,11 +73,11 @@
         <h3>Fun Fact</h3>
         <p><b>1. STAR SIGN? MEYERS BRIGGS? </b> <br>- Virgo & INTJ</p>
         <p><b>2. WHAT'S YOUR TRAVEL SUPERPOWER? </b> <br>- My ability to sleep anywhere, anytime!</p>
-        <p><b>3. SOME DAY I WILL </b> <br>- Write a book, open a boutique hotel, and film a documentary.</p>
-        <p><b>4. WHAT ARE YOUR FAVORITE PERSONALITY CHARACTERISTICS IN YOURSELF? </b> <br>- My endless curiosity, undying loyalty, unparalleled adaptability and eternal optimism.</p>
-<br>
+        <p><b>3. WHAT ARE YOUR FAVORITE PERSONALITY CHARACTERISTICS IN YOURSELF? </b> <br>- My endless curiosity, undying loyalty, unparalleled adaptability and eternal optimism.</p>
         <a href="#" class="btn">Read More</a>
       </div>
+
+      
     </div>
 
 <br>
@@ -121,6 +137,15 @@
 </setion>
   
   <!-- custom js -->
-  <script src="script.js"></script>
+  <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+    });
+
+  </script>
 </body>
 </html>

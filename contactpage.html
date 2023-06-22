@@ -18,16 +18,17 @@
   <header class="header">
     <a href="#" class="logo">iKen <span>Travel</span></a>
 
-    <i class='bx bx-menu' id="menu-icon"></i>
+    <div class="menu-btn"></div>
 
-    <nav class="navbar">
-        <a href="homepage.html">Home</a>
+  <div class="navigation">
+    <div class="navbar">
+        <a href="index.html">Home</a>
         <a href="aboutpage.html">About</a>        
         <a href="adventurepage.html">Adventure</a>        
         <a href="faqpage.html">FAQ</a>        
         <a href="contactpage.html">Contact</a>        
-
-    </nav>
+    </div>
+  </div>
   </header>
 
 
@@ -47,7 +48,7 @@
       </div>
   
       <div class="c3">
-        <img src="/Sample4.jpeg" alt="">
+        <img src="/Photos/Sample4.jpeg" alt="">
       </div>
     </div>
   </section>
@@ -127,6 +128,16 @@
 </setion>
   
   <!-- custom js -->
-  <script src="script.js"></script>
+  <!-- custom js -->
+  <script type="text/javascript">
+    const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+});
+
+</script>
 </body>
 </html>
