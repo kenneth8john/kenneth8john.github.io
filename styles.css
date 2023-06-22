@@ -158,66 +158,7 @@ section {
 
 }
 
-/*ACCORDION
-.accordion {
-  width: 800px;
-  margin: 90px auto;
-  color: black;
-  background-color: var(--second-bg-color);
-  padding: 45px 45px;
-}
-
-.accordion .accordion-container {
-  position: relative;
-  margin: 10px 10px;
-}
-
-.accordion .label {
-  position: relative;
-  padding: 10px 0;
-  font-size: 15px;
-  color: black;
-  cursor: pointer;
-}
-
-.accordion .label::before {
-  content: '+';
-  color: #F24C3D;
-  position: absolute;
-  top: 50%;
-  right: -5px;
-  font-size: 15px;
-  transform: translateY(-50%);
-}
-
-.accordion .content {
-  position: relative;
-  background: var(--second-bg-color);
-  height: 0;
-  font-size: 15px;
-  text-align: justify;
-  width: 650px;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-.accordion hr {
-  width: 100;
-  margin-left: 0;
-  border: 1px solid #22A699;
-}
-
-.accordion .accordion-container.active .content {
-  height: 100px;
-}
-
-.accordion .accordion-container.active .label::before {
-  content: '-';
-  font-size: 30px;
-}
-*/
-
-/*ACCORDIONG*/
+/*ACCORDING*/
 
 section .section-accordion {
   width: 100%;
