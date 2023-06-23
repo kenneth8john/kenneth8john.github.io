@@ -45,6 +45,7 @@ section {
   z-index: 100;
 }
 
+
 .logo {
   font-size: 2.5rem;
   color: var(--text-color);
@@ -91,6 +92,9 @@ section {
   display: flex;
   text-align: center;
   margin-top: 10px;
+
+  background: var(--second-bg-color);
+
 }
 
 .faq-container h3 {
@@ -160,12 +164,14 @@ section {
 
 /*ACCORDING*/
 
-section .section-accordion {
+.section-accordion {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--second-bg-color);
+
 
 }
 
@@ -173,7 +179,9 @@ section .section-accordion {
   width: 100%;
   max-width: 80rem;
   margin: -25px auto;
-  padding: 25px 1.5rem;
+  padding: 0px 1.5rem;
+  background: var(--second-bg-color);
+
 }
 
 .accordion-item {
@@ -456,7 +464,7 @@ section .section-accordion {
 
 .about-container .about-box {
   flex: 1 1 30rem;
-  background: var(--bg-color);
+  background: var(--second-bg-color);
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
   text-align: center;
@@ -485,7 +493,7 @@ section .section-accordion {
 }
 
 .portfolio {
-  background: var(--bg-color);
+  background: var(--second-bg-color);
 }
 
 .portfolio h2 {
@@ -521,7 +529,7 @@ section .section-accordion {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+  background: linear-gradient(rgba(248, 247, 247, 0.185), var(--main-color));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -530,6 +538,7 @@ section .section-accordion {
   padding: 0 4rem;
   transform: translateY(100%);
   transition: .5s ease;
+  font-weight: 300;
 }
 
 .portfolio-box:hover .portfolio-layer {
