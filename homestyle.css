@@ -134,19 +134,6 @@ section {
     border-radius: 50px;
 }
 
-.home .media-icons {
-    z-index: 888;
-    position: absolute;
-    right: 30px;
-    display: flex;
-    flex-direction: column;
-    transition: 0.5s ease;
-}
-
-.home .media-icons a{
-    color: #EBD2BC;
-    font-size: 1.6em;
-}
 
 .home .media-icons a:not(:last-child) {
     margin-bottom: 20px;
